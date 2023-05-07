@@ -1,0 +1,13 @@
+Write a SQL query to find those customers with a grade less than 100.
+It should return cust_name, customer city, grade, salesman, and salesman city. 
+The result should be ordered by ascending customer_id.
+
+
+SQL query:(Answer)
+-----------------
+
+SELECT customer.cust_name,customer.city AS Cust_city,customer.grade,salesman.name AS Salesman_Name,salesman.city AS Salesman_city 
+FROM customer LEFT JOIN salesman
+ON customer.salesman_id=salesman.salesman_id HAVING grade < 100
+ORDER BY customer_id ASC;
+
