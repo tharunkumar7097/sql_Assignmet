@@ -1,0 +1,26 @@
+QUESTIONS:
+5.	Select all columns from the contact table where the active flag is 1
+6.	Deactivate contacts who are opted out 
+7.	Delete all the contacts who have the company name as ‘ABC’
+8.	Insert a new row with id as 658, name as ‘mili’, email as ‘mili@gmail.com’, the company as ‘DGH’, active flag as 1, opt-out flag as 1
+9.	Pull out the unique values of the company column 
+10.	Update name “mili” to “niti”.
+
+
+queries for the above questions(Answers):-
+----------------------------------------
+
+
+5)   SELECT *FROM CONTACT WHERE ACTIVE_FLAG=1;
+
+6)   UPDATE CONTACT SET ACTIVE_FLAG = 0 WHERE OPT_OUT=0;
+
+7)   DELETE FROM CONTACT WHERE COMPANY='ABC';
+
+8)   INSERT INTO CONTACT(ID,EMAIL,Fname,Lname,COMPANY,Active_Flag,opt_out)
+     VALUES(658,'mili@gmail.com','mili','NULL','DGH',1,1);
+
+9)   SELECT DISTINCT(COMPANY) FROM CONTACT;
+
+10)  UPDATE CONTACT SET Fname='niti' WHERE Fname='mili';
+
